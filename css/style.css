@@ -1,0 +1,14 @@
+.button {
+    /* أزل أي background-color أو text-fill من الـ Inspector واتركه هنا */
+    -fx-background-color: transparent; 
+    -fx-text-fill: #cccccc;
+    /* يمكنك إضافة الانتقال لجعل التأثير أكثر سلاسة: */
+    -fx-transition: -fx-background-color 0.2s ease;
+}
+
+/* 2. التنسيق عند مرور الماوس فوقه (Hover Effect) */
+/* هذا هو التنسيق الذي يظهر عند تحريك الماوس فوق الزر */
+.button:hover {
+    -fx-background-color: #66b7f2; /* لون الخلفية الجديد */
+    -fx-text-fill: white;          /* يمكنك تغيير لون النص عند المرور */
+}

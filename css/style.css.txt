@@ -1,0 +1,41 @@
+/* ==============================
+   الأسلوب العام للأزرار
+   ============================== */
+.button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #cccccc;
+    -fx-font-size: 15px;
+    -fx-padding: 10 15 10 15;
+    -fx-cursor: hand;
+    -fx-background-radius: 6;
+    -fx-border-radius: 6;
+    -fx-border-color: transparent;
+}
+
+
+/* ==============================
+   تأثير Hover عند مرور الماوس
+   ============================== */
+.button:hover {
+    -fx-background-color: #66b7f2;
+    -fx-text-fill: black;
+}
+
+
+/* ==============================
+   لو تريد شكل عند الضغط
+   ============================== */
+.button:pressed {
+    -fx-background-color: #4ea4dd;
+}
+
+
+/* ==============================
+   شكل الأزرار في القائمة الجانبية
+   لون إضافي عند اختيار واحد
+   ============================== */
+.button:selected,
+.button:focused {
+    -fx-background-color: #5fa9e6;
+    -fx-text-fill: #000000;
+}
