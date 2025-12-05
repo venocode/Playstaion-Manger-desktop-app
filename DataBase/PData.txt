@@ -1,2 +1,0 @@
-VIP_PRICE: 10
-Normal_PRICE: 5
