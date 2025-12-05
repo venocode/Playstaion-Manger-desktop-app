@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.FlowPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="837.0" prefWidth="1270.0" style="-fx-background-color: #465594;" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="manager_pls5.Screen.RL">
+    
+    <children>
+        <ImageView fitHeight="855.0" fitWidth="1275.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="0.0">
+            <image>
+                <Image url="@../photo/1sp.png" />
+            </image>
+        </ImageView>
+        <Pane layoutX="130.0" layoutY="92.0" prefHeight="671.0" prefWidth="1012.0" style="-fx-background-color: rgba(237, 239, 240, 0.6); -fx-background-radius: 20;" styleClass="main-container">
+            <children>
+                <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="25.0" prefHeight="50.0" prefWidth="923.0" spacing="15.0">
+                    <children>
+                        <Pane prefHeight="50.0" prefWidth="610.0">
+                            <children>
+                                <Button fx:id="addButton1" layoutX="14.0" layoutY="12.0" mnemonicParsing="false" onAction="#OpenMasag" prefHeight="27.0" prefWidth="104.0" style="-fx-background-color: rgba(59, 62, 110, 0.5); -fx-background-radius: 8;" text="New Room " textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="13.0" />
+                                    </font>
+                                    <effect>
+                                        <DropShadow>
+                                            <color>
+                                                <Color red="0.04105263203382492" green="0.04105263203382492" blue="0.28421053290367126" />
+                                            </color>
+                                        </DropShadow>
+                                    </effect>
+                                </Button>
+                                <Label layoutX="385.0" layoutY="15.0" prefHeight="21.0" prefWidth="104.0" styleClass="room-number-label" text="Totale Room" textFill="#eceaea">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                                <Label layoutX="489.0" layoutY="15.0" prefHeight="21.0" prefWidth="37.0" styleClass="room-number-label" text="8" textFill="#eceaea">
+                                    <font>
+                                        <Font name="System Bold" size="15.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <Button fx:id="addButton" mnemonicParsing="false" prefHeight="24.0" prefWidth="86.0" style="-fx-background-color: rgba(59, 62, 110, 0.5); -fx-background-radius: 8;" text="Search" textFill="WHITE">
+                            <font>
+                                <Font name="System Bold" size="13.0" />
+                            </font>
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color red="0.04105263203382492" green="0.04105263203382492" blue="0.28421053290367126" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+                        <TextField prefHeight="31.0" prefWidth="198.0" promptText="Search by Number" style="-fx-background-color: rgba(237, 239, 240, 0.7); -fx-background-radius: 10; -fx-padding: 0 10 0 10;">
+                            <font>
+                                <Font size="10.0" />
+                            </font>
+                            <effect>
+                                <DropShadow>
+                                    <color>
+                                        <Color red="0.800000011920929" green="0.800000011920929" blue="0.800000011920929" />
+                                    </color>
+                                </DropShadow>
+                            </effect>
+                        </TextField>
+                    </children>
+                </HBox>
+                <ScrollPane fitToWidth="true" layoutX="25.0" layoutY="100.0" prefHeight="559.0" prefWidth="958.0" style="-fx-background-color: #9fa0b0;" styleClass="cards-scroll-pane">
+                    <content>
+                        <FlowPane fx:id="roomCardsFlowPane" alignment="TOP_LEFT" hgap="5.0" prefHeight="523.0" prefWidth="943.0" style="-fx-background-color: #9fa0b0;" vgap="5.0">
+                            <padding>
+                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                            </padding>
+                            <children>
+                                <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-occupied">
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #E6CA00, #FFFFFF);">
+                                            <children>
+                                                <Label styleClass="room-number-label" text="Room ">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="room-number-label" text="1">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="94.0" prefWidth="151.0">
+                                                    <children>
+                                                        <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="0:25:40">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="27.0" layoutY="-9.0" text="VIP Room" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="139.44" radius="94.7475" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="0.08518518507480621" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button fx:id="d1" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #FFEB7C,#ffe175, #886915);" text="Room details">
+                                                    <effect>
+                                                        <DropShadow>
+                                                            <color>
+                                                                <Color red="0.9758883118629456" green="1.0" />
+                                                            </color>
+                                                        </DropShadow>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Pane>
+                        <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-occupied">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #E6CA00, #FFFFFF);">
+                                 <children>
+                                    <Label styleClass="room-number-label" text="Room ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label styleClass="room-number-label" text="2">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="94.0" prefWidth="151.0">
+                                       <children>
+                                          <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="0:00:40">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="27.0" layoutY="-9.0" text="VIP Room" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="139.44" radius="94.7475" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="1.0" green="1.0" blue="0.08518518507480621" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="d2" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #FFEB7C,#ffe175, #886915);" text="Room details">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="0.9758883118629456" green="1.0" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                                <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-available">
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #66b7f2,#F0F5F8);">
+                                            <children>
+                                                <Label styleClass="room-number-label" text="Room ">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="room-number-label" text="3">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="94.0" prefWidth="151.0">
+                                                    <children>
+                                                        <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="00:00:00">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="37.0" layoutY="-2.0" text="Normal" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="190.5" radius="107.5125" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="0.33703702688217163" green="0.9337037205696106" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button fx:id="d3" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #A9D9F8, #5A9BCF);" text="Room details">
+                                                    <effect>
+                                                        <DropShadow>
+                                                            <color>
+                                                                <Color red="0.5001999735832214" green="0.7507100105285645" blue="0.8199999928474426" />
+                                                            </color>
+                                                        </DropShadow>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Pane>
+                                <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-available">
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #66b7f2,#F0F5F8);">
+                                            <children>
+                                                <Label styleClass="room-number-label" text="Room ">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="room-number-label" text="4">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="94.0" prefWidth="151.0">
+                                                    <children>
+                                                        <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="00:00:00">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="38.0" layoutY="-1.0" text="Normal" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="190.5" radius="107.5125" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="0.33703702688217163" green="0.9337037205696106" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button fx:id="d4" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #A9D9F8, #5A9BCF);" text="Room details">
+                                                    <effect>
+                                                        <DropShadow>
+                                                            <color>
+                                                                <Color red="0.5001999735832214" green="0.7507100105285645" blue="0.8199999928474426" />
+                                                            </color>
+                                                        </DropShadow>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Pane>
+                                <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-available">
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #66b7f2,#F0F5F8);">
+                                            <children>
+                                                <Label styleClass="room-number-label" text="Room ">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="room-number-label" text="5">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="94.0" prefWidth="151.0">
+                                                    <children>
+                                                        <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="00:00:00">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="42.0" layoutY="-1.0" text="Normal" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="190.5" radius="107.5125" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="0.33703702688217163" green="0.9337037205696106" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button fx:id="d5" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #A9D9F8, #5A9BCF);" text="Room details">
+                                                    <effect>
+                                                        <DropShadow>
+                                                            <color>
+                                                                <Color red="0.5001999735832214" green="0.7507100105285645" blue="0.8199999928474426" />
+                                                            </color>
+                                                        </DropShadow>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Pane>
+                        <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-available">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #66b7f2,#F0F5F8);">
+                                 <children>
+                                    <Label styleClass="room-number-label" text="Room ">
+                                       <font>
+                                          <Font name="System Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label styleClass="room-number-label" text="6">
+                                       <font>
+                                          <Font name="System Bold" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Pane prefHeight="94.0" prefWidth="151.0">
+                                       <children>
+                                          <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="00:00:00">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="42.0" layoutY="-1.0" text="Normal" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="190.5" radius="107.5125" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="0.33703702688217163" green="0.9337037205696106" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Button fx:id="d6" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #A9D9F8, #5A9BCF);" text="Room details">
+                                       <effect>
+                                          <DropShadow>
+                                             <color>
+                                                <Color red="0.5001999735832214" green="0.7507100105285645" blue="0.8199999928474426" />
+                                             </color>
+                                          </DropShadow>
+                                       </effect>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </Pane>
+                                <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-available">
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #66b7f2,#F0F5F8);">
+                                            <children>
+                                                <Label styleClass="room-number-label" text="Room ">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="room-number-label" text="7">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="94.0" prefWidth="151.0">
+                                                    <children>
+                                                        <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="00:00:00">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="42.0" layoutY="-2.0" text="Normal" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="190.5" radius="107.5125" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="0.33703702688217163" green="0.9337037205696106" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button fx:id="d7" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #A9D9F8, #5A9BCF);" text="Room details">
+                                                    <effect>
+                                                        <DropShadow>
+                                                            <color>
+                                                                <Color red="0.5001999735832214" green="0.7507100105285645" blue="0.8199999928474426" />
+                                                            </color>
+                                                        </DropShadow>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Pane>
+                                <Pane prefHeight="260.0" prefWidth="180.0" styleClass="room-card-available">
+                                    <children>
+                                        <VBox alignment="CENTER" layoutX="10.0" layoutY="30.0" prefHeight="220.0" prefWidth="151.0" spacing="10.0" style="-fx-background-color: linear-gradient(to bottom, #66b7f2,#F0F5F8);">
+                                            <children>
+                                                <Label styleClass="room-number-label" text="Room ">
+                                                    <font>
+                                                        <Font name="System Bold" size="12.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label styleClass="room-number-label" text="8">
+                                                    <font>
+                                                        <Font name="System Bold" size="16.0" />
+                                                    </font>
+                                                </Label>
+                                                <Pane prefHeight="94.0" prefWidth="151.0">
+                                                    <children>
+                                                        <Label layoutX="52.0" layoutY="60.0" styleClass="time-status-label" text="00:00:00">
+                                                            <font>
+                                                                <Font name="System Bold" size="14.0" />
+                                                            </font>
+                                                        </Label>
+                                          <Label layoutX="42.0" layoutY="-1.0" text="Normal" textFill="#aeaeae">
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                             <effect>
+                                                <DropShadow height="190.5" radius="107.5125" spread="0.4" width="241.55">
+                                                   <color>
+                                                      <Color red="0.33703702688217163" green="0.9337037205696106" blue="1.0" />
+                                                   </color>
+                                                </DropShadow>
+                                             </effect>
+                                          </Label>
+                                                    </children>
+                                                </Pane>
+                                                <Button fx:id="d8" prefWidth="140.0" style="-fx-background-color: linear-gradient(to bottom, #A9D9F8, #5A9BCF);" text="Room details">
+                                                    <effect>
+                                                        <DropShadow>
+                                                            <color>
+                                                                <Color red="0.5001999735832214" green="0.7507100105285645" blue="0.8199999928474426" />
+                                                            </color>
+                                                        </DropShadow>
+                                                    </effect>
+                                                </Button>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </Pane>
+                            </children>
+                        </FlowPane>
+                    </content>
+                </ScrollPane>
+            </children>
+        </Pane>
+      <Button fx:id="addButton2" layoutX="33.0" layoutY="24.0" mnemonicParsing="false" onAction="#switchToTRSScreen11" prefHeight="24.0" prefWidth="86.0" style="-fx-background-color: rgba(59, 62, 110, 0.5); -fx-background-radius: 8;" text="Go back" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow>
+               <color>
+                  <Color red="0.04" green="0.04" blue="0.28" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Button>
+    </children>
+</AnchorPane>
